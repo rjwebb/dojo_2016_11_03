@@ -35,7 +35,25 @@
   "science": {
     "name": "Science",
     "teacher": "Miss Chaganti",
-    "description": "You are in the science room. There is a strange smell of burning and a smouldering hole in the ceiling. Exit to the West."
+    "description": "You are in the science room. There is a strange smell of burning and a smouldering hole in the ceiling. Exit to the West.",
+    "questions": [
+      {
+        "question": "What is the atomic weight of Berylium?",
+        "answer": "4"
+      },
+      {
+        "question": "What is the fourth planet from the Sun?",
+        "answer": "Mars"
+      },
+      {
+        "question": "What came first, the chicken or the egg?",
+        "answer": "Egg"
+      },
+      {
+        "question": "What food makes up a panda's diet?",
+        "answer": "Bamboo"
+      }
+    ]
   },
   "yard": {
     "name": "Schoolyard",
