@@ -22,7 +22,7 @@ science = starting_room.east = Room("""
 You are in the science room. There is a strange smell of burning and a smouldering hole in the ceiling. Exit to the West.
 """)
 
-headteachers_room.north = Room("""
+headteachers_room = starting_room.north = Room("""
 You are in the headmaster's office. You see books lining the walls. There is a smell of old leather and adolescent fear. Exit to the South
 """)
 
@@ -44,14 +44,18 @@ def look():
             maths.start_time = time.time()
             maths.time_until = random.randint(5, 25)
 
-        timediff = time.time() - maths.start_time
-        if timediff < maths.time_until:
+        t = how_long_until(maths)
+        if t > 0:
             say('It is {} seconds until maths class!'
-                .format(maths.time_until - timediff))
+                .format(int(t)))
         else:
             say('You are {} seconds late to maths class!'
-                .format(timediff - maths.time_until))
+                .format(int(-t)))
 
+def how_long_until(room):
+    timediff = time.time() - room.start_time
+    return room.time_until - timediff
+            
 
 @when('north', direction='north')
 @when('south', direction='south')
@@ -62,16 +66,17 @@ def go(direction):
     room = current_room.exit(direction)
     if room:
         if room == maths:
-            timediff = time.time() - maths.start_time
-            if timediff < maths.time_until:
+            t = how_long_until(maths)
+            if t > 0:
                 say('You have arrived on time to maths class!')
                 say('You go %s.' % direction)
                 current_room = room
             else:
                 say('You are {} seconds late to maths class!'
-                    .format(timediff - maths.time_until))
+                    .format(int(-t)))
                 missed_class()
             look()
+
 
 look()
 start()
