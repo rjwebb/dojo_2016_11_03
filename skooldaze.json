@@ -1,0 +1,45 @@
+{
+  "maths": {
+    "name": "Maths",
+    "teacher": "Mr Tangent",
+    "description": "You are in the Maths room. There is a blackboard on the West wall. Exit to the East.",
+    "questions": [
+      {
+        "question": "What is 7 times 6?",
+        "answer": "42"
+      },
+      {
+        "question": "What is 2 to the power 5?",
+        "answer": "32"
+      },
+      {
+        "question": "What is 27 divided by 3?",
+        "answer": "9"
+      },
+      {
+        "question": "What is the meaning of life?",
+        "answer": "42"
+      }
+    ]
+  },
+  "hall": {
+    "name": "Hallway",
+    "teacher": "Mr Bob",
+    "description": "You are in the hallway. The Headmaster's office is to the north. The Science room is to the East. The Maths room is to the West. The school exit is South"
+  },
+  "headmaster": {
+    "name": "Headmaster's Office",
+    "teacher": "Mr Calum",
+    "description": "You are in the headmaster's office. You see books lining the walls. There is a smell of old leather and adolescent fear. Exit to the South"
+  },
+  "science": {
+    "name": "Science",
+    "teacher": "Miss Chaganti",
+    "description": "You are in the science room. There is a strange smell of burning and a smouldering hole in the ceiling. Exit to the West."
+  },
+  "yard": {
+    "name": "Schoolyard",
+    "teacher": "Miss Hanine",
+    "description": "You are in the yard. The school entrance is in to the North"
+  }
+}
