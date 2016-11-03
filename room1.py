@@ -26,7 +26,11 @@ You are in the science room with Miss Chaganti. There is a strange smell of burn
 science.name = 'Science'
 
 headteachers_room = Room("""
-You are in the headmaster's office. You see books lining the walls. There is a smell of old leather and adolescent fear. Exit to the South
+You are in the headmaster's office. You see books lining the walls. There is a smell of old leather and adolescent fear.
+
+You are currently being punished for something.
+
+Exit to the South.
 """)
 
 yard = Room("""
