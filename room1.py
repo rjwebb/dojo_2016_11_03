@@ -2,22 +2,32 @@ from adventurelib import *
 import random
 import time
 
+Room.items = Bag()
+
 
 Room.start_time = None
 Room.time_until = None
 
 
-
 hallway = starting_room = Room("""
-You are in the hallway.
+You are in the hallway. The Headmaster's office is to the north. The Science room is to the East. The Maths room is to the West. The school exit is South
 """)
+
 
 maths = starting_room.west = Room("""
-You are in the maths room.
+You are in the Maths room. There is a blackboard on the West wall. Exit to the East.
 """)
 
-headteachers_room = Room("""
-You are in detention! This is the headteacher's room.
+science = starting_room.east = Room("""
+You are in the science room. There is a strange smell of burning and a smouldering hole in the ceiling. Exit to the West.
+""")
+
+headteachers_room.north = Room("""
+You are in the headmaster's office. You see books lining the walls. There is a smell of old leather and adolescent fear. Exit to the South
+""")
+
+yard = starting_room.south = Room("""
+You are in the yard. The school entrance is in to the North
 """)
 
 current_room = hallway
@@ -62,7 +72,6 @@ def go(direction):
                     .format(timediff - maths.time_until))
                 missed_class()
             look()
-        
-    
+
 look()
 start()
